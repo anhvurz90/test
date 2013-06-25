@@ -1,2 +1,2 @@
 hello2
-modify for reset
+git reset
