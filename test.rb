@@ -1,2 +1,3 @@
-hello2
-git reset
+hello
+git revert 
+- add new content
