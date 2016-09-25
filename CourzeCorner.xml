@@ -10,10 +10,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <!-- Your application code -->
       <script>
-         alert("CourzeCorner!!!");
 	 console.log("CourzeCorner!!!");
 	 gapi.hangout.onApiReady.add(function(eventObj) {
-	 	 alert(gapi.hangout.getHangoutUrl());
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
 		 $.get("http://localhost:8080/api/hangout", {url:gapi.hangout.getHangoutUrl()})
 			.done(function(data) {
