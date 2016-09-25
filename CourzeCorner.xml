@@ -9,11 +9,16 @@
       <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
       <!-- Your application code -->
       <script>
+         google.load("jquery", "3.1.1");
          alert("CourzeCorner!!!");
 	 console.log("CourzeCorner!!!");
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 alert(gapi.hangout.getHangoutUrl());
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
+		 $.get("localhost:8080/hangout", {url:gapi.hangout.getHangoutUrl()})
+			.done(function(data) {
+				console.log("Sent hangout url to server");
+			});
 	});
 
       </script>
