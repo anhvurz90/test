@@ -11,7 +11,11 @@
       <script>
          alert("CourzeCorner!!!");
 	 console.log("CourzeCorner!!!");
-	 alert(gapi.hangout.getHangoutUrl());
+	 gapi.hangout.onApiReady.add(function(eventObj) {
+	 	 alert(gapi.hangout.getHangoutUrl());
+	 	 console.log(gapi.hangout.getHangoutUrl());		 
+	});
+
       </script>
     ]]>
   </Content>
