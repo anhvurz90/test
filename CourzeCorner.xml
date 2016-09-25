@@ -15,7 +15,7 @@
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 alert(gapi.hangout.getHangoutUrl());
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
-		 $.get("http://localhost:8080/hangout", {url:gapi.hangout.getHangoutUrl()})
+		 $.get("http://localhost:8080/api/hangout", {url:gapi.hangout.getHangoutUrl()})
 			.done(function(data) {
 				console.log("Sent hangout url to server");
 			});
