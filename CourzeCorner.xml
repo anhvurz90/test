@@ -13,7 +13,7 @@
 	 console.log("CourzeCorner!!!");
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
-		 $.get("http://localhost:8080/api/hangout", {url:gapi.hangout.getHangoutUrl()})
+		 $.post("http://localhost:8080/api/hangout", {url:gapi.hangout.getHangoutUrl()})
 			.done(function(data) {
 				console.log("Sent hangout url to server");
 			});
