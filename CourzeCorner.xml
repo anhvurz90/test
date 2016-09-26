@@ -13,10 +13,16 @@
 	 console.log("CourzeCorner!!!");
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
-		 $.get("https://localhost:8443/api/hangout", {url:gapi.hangout.getHangoutUrl()})
-			.done(function(data) {
-				console.log("Sent hangout url to server");
-			});
+		 
+		 $.ajax({
+			url: "https://localhost:8443/api/hangout",
+			type: "GET",
+			data: {url:gapi.hangout.getHangoutUrl()},
+			async: true,
+			crossOrigin: true
+		}).done(function(data) {
+			console.log("Sent hangout url to server");
+		});
 	});
 
       </script>
