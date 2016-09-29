@@ -13,11 +13,17 @@
 	 console.log("CourzeCorner!!!");
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
-		 
+
+		urlParam = function(name){
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			return results[1] || 0;
+		}
+
 		 $.ajax({
 			url: "https://localhost:8080/api/hangout",
 			type: "GET",
-			data: {url:gapi.hangout.getHangoutUrl()},
+			data: {url:gapi.hangout.getHangoutUrl(),
+			          targetUserId: urlParam("targetUserId")},
 			async: true,
 			crossOrigin: true
 		}).done(function(data) {
