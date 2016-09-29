@@ -15,7 +15,7 @@
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
 		 
 		 $.ajax({
-			url: "https://dev.courzecorner.com:8080/api/hangout",
+			url: "https://localhost:8080/api/hangout",
 			type: "GET",
 			data: {url:gapi.hangout.getHangoutUrl()},
 			async: true,
