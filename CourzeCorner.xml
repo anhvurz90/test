@@ -11,6 +11,10 @@
       <!-- Your application code -->
       <script>
 	 console.log("CourzeCorner!!!");
+	 console.log(gapi.hangout.getHangoutUrl());
+	 console.log(window.location.search);
+	 console.log(window.location.href);
+	 console.log(window.location);
 	 gapi.hangout.onApiReady.add(function(eventObj) {
 	 	 console.log(gapi.hangout.getHangoutUrl());		 
 
